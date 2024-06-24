@@ -4,15 +4,8 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-int main()
-{
-    cout << "Chuong trinh giai phuong trinh bat hai";
-    int a, b, c;
-    double x1, x2, delta;
-    cout << "Nhap a b c: \n"; 
-    cin >> a;
-    cin >> b;
-    cin >> c;
+double giaiphuongtrinhbathai(int a, int b, int c) {
+    double delta, x1, x2;
     if (a == 0) {
         if (b == 0) {
             cout << "Phuong trinh vo nghiem";
@@ -24,7 +17,7 @@ int main()
     }
     else {
         delta = b * b - 4 * a * c;
-        if (delta < 0 ) {
+        if (delta < 0) {
             cout << "Phuong trinh vo nghiem";
         }
         else {
@@ -33,6 +26,19 @@ int main()
             cout << "Phuong trinh co hai nghiem\n" << x1 << "\n" << x2;
         }
     }
+    return 0;
+}
+
+int main()
+{
+    cout << "Chuong trinh giai phuong trinh bat hai";
+    int a, b, c;
+    //double x1, x2, delta;
+    cout << "Nhap a b c: \n"; 
+    cin >> a;
+    cin >> b;
+    cin >> c;
+    giaiphuongtrinhbathai(a, b, c);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
